@@ -1,29 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int esNegativo(int x);
+
 int main(void){
     int x,y;
 
     printf("Ingresa un numero ");
     scanf("%d",&x);
-    printf("Ingresa otro numero ");
-    scanf("%d",&y);
 
-    if(x%y == 0){
-        printf("%d es multiplo de %d.\n\n",x,y);
-    }
-    else{
-        printf("%d no es multiplo de %d.\n\n",x,y);
-    }
+    printf("La funcion retorna: %d",esNegativo(x));
 
     return 0;
 }
 
-
-
-
-
-
-
-
-
+int esNegativo(int x){
+    return x<0;
+}
