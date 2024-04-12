@@ -1,24 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int esPar(int x);
+int esMultiploDe(int x, int y);
 
 int main(void){
-    int x;
+    int x,y;
 
     printf("Ingresa un numero ");
     scanf("%d",&x);
+    printf("Ingresa otro numero ");
+    scanf("%d",&y);
 
-    if(esPar(x)){
-        printf("ES par\n\n");
-    }
-    else{
-        printf("NO es par\n\n");
-    }
+    printf("La funcion retorna: %d",esMultiploDe(x,y));
 
     return 0;
 }
 
-int esPar(int x){
-    return x%2 == 0;
+int esMultiploDe(int x, int y){
+    return x%y == 0;
 }
