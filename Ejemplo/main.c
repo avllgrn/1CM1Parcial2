@@ -10,6 +10,9 @@ int main(void){
     if(x<0){
         printf("%d es negativo.\n\n",x);
     }
+    else{
+        printf("%d no es negativo.\n\n",x);
+    }
 
     return 0;
 }
