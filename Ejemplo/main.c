@@ -10,6 +10,9 @@ int main(void){
     if(x%2 == 0){
         printf("%d es par.\n\n",x);
     }
+    else{
+        printf("%d no es par.\n\n",x);
+    }
 
     return 0;
 }
