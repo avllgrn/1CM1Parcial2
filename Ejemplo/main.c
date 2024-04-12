@@ -2,16 +2,15 @@
 #include <stdlib.h>
 
 int main(void){
-    int x;
+    int x,y;
 
     printf("Ingresa un numero ");
     scanf("%d",&x);
+    printf("Ingresa otro numero ");
+    scanf("%d",&y);
 
-    if(x%2 == 0){
-        printf("%d es par.\n\n",x);
-    }
-    else{
-        printf("%d no es par.\n\n",x);
+    if(x%y == 0){
+        printf("%d es multiplo de %d.\n\n",x,y);
     }
 
     return 0;
