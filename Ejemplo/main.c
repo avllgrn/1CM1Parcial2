@@ -12,6 +12,9 @@ int main(void){
     if(x%y == 0){
         printf("%d es multiplo de %d.\n\n",x,y);
     }
+    else{
+        printf("%d no es multiplo de %d.\n\n",x,y);
+    }
 
     return 0;
 }
