@@ -11,7 +11,12 @@ int main(void){
     printf("Ingresa otro numero ");
     scanf("%d",&y);
 
-    printf("La funcion retorna: %d",esMultiploDe(x,y));
+    if(esMultiploDe(x,y)){
+        printf("%d ES multiplo de %d\n\n",x,y);
+    }
+    else{
+        printf("%d NO es multiplo de %d\n\n",x,y);
+    }
 
     return 0;
 }
