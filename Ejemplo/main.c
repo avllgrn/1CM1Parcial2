@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int esNegativo(int x);
+int esPar(int x);
 
 int main(void){
-    int x,y;
+    int x;
 
     printf("Ingresa un numero ");
     scanf("%d",&x);
 
-    if(esNegativo(x)){
-        printf("ES negativo\n\n");
-    }
-    else{
-        printf("NO es negativo\n\n");
-    }
+    printf("La funcion retorna: %d",esPar(x));
 
     return 0;
 }
 
-int esNegativo(int x){
-    return x<0;
+int esPar(int x){
+    return x%2 == 0;
 }
