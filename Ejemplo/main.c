@@ -9,7 +9,12 @@ int main(void){
     printf("Ingresa un numero ");
     scanf("%d",&x);
 
-    printf("La funcion retorna: %d",esNegativo(x));
+    if(esNegativo(x)){
+        printf("ES negativo\n\n");
+    }
+    else{
+        printf("NO es negativo\n\n");
+    }
 
     return 0;
 }
