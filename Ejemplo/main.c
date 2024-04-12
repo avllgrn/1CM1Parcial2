@@ -9,7 +9,12 @@ int main(void){
     printf("Ingresa un numero ");
     scanf("%d",&x);
 
-    printf("La funcion retorna: %d",esPar(x));
+    if(esPar(x)){
+        printf("ES par\n\n");
+    }
+    else{
+        printf("NO es par\n\n");
+    }
 
     return 0;
 }
