@@ -1,25 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 int main(void){
-    float r,d,a,p;
+    char genero;
+    printf("Dame tu edad ");
+    scanf("%c",&genero);
 
-    printf("Ingresa radio ");
-    scanf("%f",&r);
-
-
-    if(r < 0){
-        printf("Error! radio invalido...\n\n");
+    if(genero == 'f'){
+        printf("femenino\n");
     }
     else{
-        d = 2 * r;
-        a = M_PI * pow(r,2);
-        p = 2 * M_PI * r;
-        printf("Radio = %f\n",r);
-        printf("Diametro = %f\n",d);
-        printf("Area = %f\n",a);
-        printf("Perimetro = %f\n",p);
+        if(genero == 'F'){
+            printf("Femenino\n");
+        }
+        else{
+            if(genero == 'm'){
+                printf("masculino\n");
+            }
+            else{
+                if(genero == 'M'){
+                    printf("Masculino\n");
+                }
+                else{
+                    printf("Genero no reconocido\n");
+                }
+            }
+        }
     }
 
     return 0;
