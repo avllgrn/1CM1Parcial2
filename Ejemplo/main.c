@@ -4,20 +4,22 @@ int main(void){
     printf("Dame tu edad ");
     scanf("%c",&genero);
 
-    if(genero == 'f'){
-        printf("femenino\n");
-    }
-    else if(genero == 'F'){
-        printf("Femenino\n");
-    }
-    else if(genero == 'm'){
-        printf("masculino\n");
-    }
-    else if(genero == 'M'){
-        printf("Masculino\n");
-    }
-    else{
-        printf("Genero no reconocido\n");
+    switch(genero){
+        case 'f':
+            printf("femenino\n");
+            break;
+        case 'F':
+            printf("Femenino\n");
+            break;
+        case 'm':
+            printf("masculino\n");
+            break;
+        case 'M':
+            printf("Masculino\n");
+            break;
+        default:
+            printf("Genero no reconocido\n");
+            break;
     }
 
     return 0;
