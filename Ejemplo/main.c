@@ -4,33 +4,36 @@ int main(void){
     printf("Dame tu estado civil ");
     scanf("%c",&estadoCivil);
 
-    if(estadoCivil == 's'){
-        printf("soltero\n");
+    switch(estadoCivil){
+        case 's':
+            printf("soltero\n");
+            break;
+        case 'S':
+            printf("Soltero\n");
+            break;
+        case 'c':
+            printf("casado\n");
+            break;
+        case 'C':
+            printf("Casado\n");
+            break;
+        case 'd':
+            printf("divorciado\n");
+            break;
+        case 'D':
+            printf("Divorciado\n");
+            break;
+        case 'v':
+            printf("viudo\n");
+            break;
+        case 'V':
+            printf("Viudo\n");
+            break;
+        default:
+            printf("Estado civil no reconocido\n");
+            break;
     }
-    else if(estadoCivil == 'S'){
-        printf("Soltero\n");
-    }
-    else if(estadoCivil == 'c'){
-        printf("casado\n");
-    }
-    else if(estadoCivil == 'C'){
-        printf("Casado\n");
-    }
-    else if(estadoCivil == 'd'){
-        printf("divorciado\n");
-    }
-    else if(estadoCivil == 'D'){
-        printf("Divorciado\n");
-    }
-    else if(estadoCivil == 'v'){
-        printf("viudo\n");
-    }
-    else if(estadoCivil == 'V'){
-        printf("Viudo\n");
-    }
-    else{
-        printf("Estado civil no reconocido\n");
-    }
+
 
     return 0;
 }
