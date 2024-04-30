@@ -1,19 +1,16 @@
 #include <stdio.h>
 int main(void){
 
-    char genero;
+    char caracter;
 
-    printf("Ingresa tu genero ");
-    scanf("%c",&genero);
+    printf("Ingresa un caracter ");
+    scanf("%c",&caracter);
 
-    if(genero=='f' ||genero=='F'){
-        printf("Femenino");
-    }
-    else if(genero=='m' ||genero=='M'){
-        printf("Masculino");
+    if(65<=caracter && caracter<=90){
+        printf("%c ES Mayuscula",caracter);
     }
     else{
-        printf("Genero no reconocido");
+        printf("%c NO es Mayuscula",caracter);
     }
 
     return 0;
