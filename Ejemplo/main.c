@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include <math.h>
 
 void funcion1(void);
-float areaRectangulo(float b, float a);
+int menorEntre(int a, int b);
 void funcion2(void);
 
 int main(void){
     int opcion;
-    printf("1. Area rectangulo\n");
-    printf("2. Formula general\n");
+    printf("1. Menor entre 2\n");
+    printf("2. Menor entre 3\n");
     printf("3. Salir\n");
     printf("Cual es tu opcion? ");
     scanf("%d",&opcion);
@@ -32,46 +31,71 @@ int main(void){
 }
 
 void funcion1(void){
-    float base, altura, area;
-    printf("Ingresa base ");scanf("%f",&base);
-    printf("Ingresa altura ");scanf("%f",&altura);
-    if(base>0){
-        if(altura>0){
-            area = areaRectangulo(base,altura);
-            printf("Base  : %f\n",base);
-            printf("Altura: %f\n",altura);
-            printf("Area  : %f\n",area);
+    int x, y, valor;
+    printf("Ingresa x ");scanf("%d",&x);
+    printf("Ingresa y ");scanf("%d",&y);
+    valor = menorEntre(x,y);
+
+    if(valor == -1){
+        printf("%d es menor que %d\n",x,y);
+    }
+    else{
+        if(valor == 1){
+            printf("%d es menor que %d\n",y,x);
+        }
+        else{
+            printf("%d es identico a %d\n",x,y);
         }
     }
 }
-float areaRectangulo(float b, float a){
-    if(a<=0){
-        return 0;
+int menorEntre(int a, int b){
+    if(a<b){
+        return -1;
     }
     else{
-        if (b<=0){
-            return 0;
+        if(b<a){
+            return 1;
         }
         else{
-            return b*a;
+            return 0;
         }
     }
 }
 
 void funcion2(void){
-    float a,b,c,disc,x1,x2;
-    printf("Ingresa a ");scanf("%f",&a);
-    printf("Ingresa b ");scanf("%f",&b);
-    printf("Ingresa c ");scanf("%f",&c);
-    disc = pow(b,2)-4*a*c;
+    int a,b,c;
+    printf("Ingresa a ");scanf("%d",&a);
+    printf("Ingresa b ");scanf("%d",&b);
+    printf("Ingresa c ");scanf("%d",&c);
 
-    if(a==0 || disc<0){
-        printf("Error! Las raices no pueden calcularse...\n");
+    if(a<b && a<c){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,a);
+    }
+    else if(b<a && b<c){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,b);
+    }
+    else if(c<a && c<b){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,c);
+    }
+    else if(a==b && a<c){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,a);
+    }
+    else if(a==b && c<a){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,c);
+    }
+    else if(a==c && a<b){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,a);
+    }
+    else if(a==c && b<a){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,b);
+    }
+    else if(b==c && b<a){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,b);
+    }
+    else if(b==c && a<b){
+        printf("El menor entre %d %d %d es %d\n",a,b,c,a);
     }
     else{
-        x1 = (-b+sqrt(disc))/(2*a);
-        x2 = (-b-sqrt(disc))/(2*a);
-        printf("x1 = %f\n",x1);
-        printf("x2 = %f\n",x2);
+        printf("El menor entre %d %d %d es %d\n",a,b,c,a);
     }
 }
